@@ -11,7 +11,7 @@ struct ContentView : View {
     
     @State var x : CGFloat = 0
     @State var count : CGFloat = 0
-    @State var screen = UIScreen.main.bounds.width - 30
+    @State var screen = UIScreen.main.bounds.width - 100
     @State var op : CGFloat = 0
     
     @State var data = [
@@ -28,14 +28,12 @@ struct ContentView : View {
             
             VStack{
                 
-                Spacer()
-                
-                HStack(spacing: 15){
+                HStack(spacing: 50){
                     
                     ForEach(data){card in
                         
                         CardView(data: card)
-                            .offset(x: self.x + CGFloat(card.id < Int(count) ? 50 : card.id > Int(count) ? -50 : 0))
+                            .offset(x: self.x + CGFloat(card.id < Int(count) ? 100 : card.id > Int(count) ? -100 : 0))
                             .zIndex(card.id == Int(count) ? 1 : 0)
                         .highPriorityGesture(DragGesture()
                         
@@ -61,11 +59,11 @@ struct ContentView : View {
                                         
                                         self.count -= 1
                                         self.updateHeight(value: Int(self.count))
-                                        self.x = -((self.screen + 15) * self.count)
+                                        self.x = -((self.screen + 50) * self.count)
                                     }
                                     else{
                                         
-                                        self.x = -((self.screen + 15) * self.count)
+                                        self.x = -((self.screen + 50) * self.count)
                                     }
                                 }
                                 else{
@@ -75,11 +73,11 @@ struct ContentView : View {
                                         
                                         self.count += 1
                                         self.updateHeight(value: Int(self.count))
-                                        self.x = -((self.screen + 15) * self.count)
+                                        self.x = -((self.screen + 50) * self.count)
                                     }
                                     else{
                                         
-                                        self.x = -((self.screen + 15) * self.count)
+                                        self.x = -((self.screen + 50) * self.count)
                                     }
                                 }
                             })
@@ -87,6 +85,7 @@ struct ContentView : View {
                     }
                 }
                 .frame(width: UIScreen.main.bounds.width)
+                .padding(40)
                 .offset(x: self.op)
                 
                 Spacer()
@@ -95,7 +94,7 @@ struct ContentView : View {
             .navigationBarTitle("Psychobabbel")
             .animation(.spring())
             .onAppear {
-                self.op = ((self.screen + 15) * CGFloat(self.data.count / 2)) - (self.data.count % 2 == 0 ? ((self.screen + 15) / 2) : 0)
+                self.op = ((self.screen + 50) * CGFloat(self.data.count / 2)) - (self.data.count % 2 == 0 ? ((self.screen + 50) / 2) : 0)
                 
                 self.data[0].show = true
             }
@@ -122,7 +121,7 @@ struct CardView: View {
             Text(data.text)
                 .foregroundColor(Color.black)
         }
-        .frame(width: UIScreen.main.bounds.width - 30, height: data.show ? 400 : 300)
+        .frame(width: UIScreen.main.bounds.width - 100, height: data.show ? UIScreen.main.bounds.width - 100 : UIScreen.main.bounds.width - 200)
         .background(Color.white)
         .border(.black)
     }
