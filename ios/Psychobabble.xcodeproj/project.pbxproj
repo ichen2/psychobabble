@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F58595A28357443008D99A0 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F58595928357443008D99A0 /* SideMenuView.swift */; };
+		0F58595C2835773B008D99A0 /* SideMenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F58595B2835773B008D99A0 /* SideMenuOptionView.swift */; };
+		0F58595E2835979B008D99A0 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F58595D2835979B008D99A0 /* SideMenuViewModel.swift */; };
 		8676535728322FF6002ED508 /* PsychobabbleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8676535628322FF6002ED508 /* PsychobabbleApp.swift */; };
 		8676535928322FF6002ED508 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8676535828322FF6002ED508 /* ContentView.swift */; };
 		8676535B28323004002ED508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8676535A28323004002ED508 /* Assets.xcassets */; };
 		8676535E28323004002ED508 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8676535D28323004002ED508 /* Preview Assets.xcassets */; };
-		869A50792834163600F2E541 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869A50782834163600F2E541 /* RoomsViewController.swift */; };
-		869A507B2834166900F2E541 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869A507A2834166900F2E541 /* UPCarouselFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F58595928357443008D99A0 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		0F58595B2835773B008D99A0 /* SideMenuOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionView.swift; sourceTree = "<group>"; };
+		0F58595D2835979B008D99A0 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 		8676535328322FF6002ED508 /* Psychobabble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Psychobabble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8676535628322FF6002ED508 /* PsychobabbleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsychobabbleApp.swift; sourceTree = "<group>"; };
 		8676535828322FF6002ED508 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8676535A28323004002ED508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8676535D28323004002ED508 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		869A50782834163600F2E541 /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
-		869A507A2834166900F2E541 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +57,13 @@
 		8676535528322FF6002ED508 /* Psychobabble */ = {
 			isa = PBXGroup;
 			children = (
-				869A50782834163600F2E541 /* RoomsViewController.swift */,
+				0F58595928357443008D99A0 /* SideMenuView.swift */,
 				8676535628322FF6002ED508 /* PsychobabbleApp.swift */,
 				8676535828322FF6002ED508 /* ContentView.swift */,
 				8676535A28323004002ED508 /* Assets.xcassets */,
+				0F58595B2835773B008D99A0 /* SideMenuOptionView.swift */,
 				8676535C28323004002ED508 /* Preview Content */,
-				869A507A2834166900F2E541 /* UPCarouselFlowLayout.swift */,
+				0F58595D2835979B008D99A0 /* SideMenuViewModel.swift */,
 			);
 			path = Psychobabble;
 			sourceTree = "<group>";
@@ -144,8 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8676535928322FF6002ED508 /* ContentView.swift in Sources */,
-				869A50792834163600F2E541 /* RoomsViewController.swift in Sources */,
-				869A507B2834166900F2E541 /* UPCarouselFlowLayout.swift in Sources */,
+				0F58595A28357443008D99A0 /* SideMenuView.swift in Sources */,
+				0F58595E2835979B008D99A0 /* SideMenuViewModel.swift in Sources */,
+				0F58595C2835773B008D99A0 /* SideMenuOptionView.swift in Sources */,
 				8676535728322FF6002ED508 /* PsychobabbleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +276,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Psychobabble/Preview Content\"";
@@ -290,6 +295,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ichen.psychobabble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -301,6 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Psychobabble/Preview Content\"";
@@ -319,6 +326,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ichen.psychobabble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

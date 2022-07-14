@@ -4,7 +4,6 @@ private let reuseIdentifier = "Cell"
 let kRoomCellScaling: CGFloat = 0.6
 
 class RoomsViewController: UICollectionViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

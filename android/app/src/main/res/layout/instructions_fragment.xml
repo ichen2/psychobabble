@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="32dp"
+    android:paddingHorizontal="16dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="#FFFFFF">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HOW TO USE YOUR \nPSYCHOBABBEL CARDS™"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+    <View
+        android:layout_margin="4dp"
+        android:layout_width="200dp"
+        android:layout_height="2dp"
+        android:background="@color/black" />
+    <TextView
+        android:id="@+id/instructions_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/instructions"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+    <TextView
+        android:layout_marginTop="32dp"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="USE THIS CARD WHEN YOUR MATE IS SAYING SOMETHING THAT IS MAKING YOU ANGRY."
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+</LinearLayout>

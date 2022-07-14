@@ -3,11 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bordered_card.xml" value="0.1185" />
         <entry key="app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/rounded_corner_shape.xml" value="0.1105" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/card.xml" value="0.1" />
         <entry key="app/src/main/res/layout/card_fragment.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/carousel_fragment.xml" value="0.22760416666666666" />
+        <entry key="app/src/main/res/layout/carousel_layout.xml" value="0.14375" />
+        <entry key="app/src/main/res/layout/filter_fragment.xml" value="0.11068895643363728" />
+        <entry key="app/src/main/res/layout/filters_fragment.xml" value="0.13677536231884058" />
+        <entry key="app/src/main/res/layout/instructions_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/xml/scene.xml" value="0.19610507246376813" />
       </map>
     </option>

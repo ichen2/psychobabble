@@ -1,18 +1,19 @@
 package com.ichen.phsychobabble
 
 import android.content.Context
-import android.graphics.Color
-import android.graphics.Typeface
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import android.util.AttributeSet
-import android.util.Log
 import android.view.*
-import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.constraintlayout.helper.widget.Carousel
 import androidx.constraintlayout.motion.widget.MotionLayout
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
+
 
 class CardView(context: Context, attrs: AttributeSet): LinearLayout(context, attrs) {
     lateinit var card: Card
@@ -25,14 +26,6 @@ class CardView(context: Context, attrs: AttributeSet): LinearLayout(context, att
         image.layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
         image.setBackgroundResource(R.drawable.logo)
         addView(image)
-//        text.layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
-//        text.text = "default"
-//        text.setTextColor(Color.BLACK)
-//        text.textSize = 32f
-//        text.setTypeface(text.typeface, Typeface.BOLD)
-//        text.setBackgroundColor(Color.TRANSPARENT)
-//        text.visibility = View.GONE
-//        addView(text)
     }
 
     fun initialize(card: Card, openCard: (Card) -> Unit) {
@@ -40,18 +33,6 @@ class CardView(context: Context, attrs: AttributeSet): LinearLayout(context, att
         text.text = card.message
         this.openCard = openCard
     }
-//
-//    fun flip() {
-//        flipped = !flipped
-//        if(flipped) {
-//            image.visibility = View.GONE
-//            text.visibility = View.VISIBLE
-//        } else {
-//            text.visibility = View.GONE
-//            image.visibility = View.VISIBLE
-//        }
-//    }
-
 }
 
 class CustomMotionLayout(context: Context, attrs: AttributeSet): MotionLayout(context, attrs) {
@@ -70,17 +51,12 @@ class CustomMotionLayout(context: Context, attrs: AttributeSet): MotionLayout(co
                 if(isBeingClicked) {
                     val cardView = findViewById<CardView>(R.id.v2)
                     cardView.openCard(cardView.card)
-                    // flip card
                 }
                 false
             }
             else -> false
         }
         return a
-    }
-
-    fun flipAllCards() {
-
     }
 }
 
@@ -98,10 +74,17 @@ class CardFragment: Fragment(R.layout.card_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val message = requireArguments().getString("message")
         val messageText = view.findViewById<TextView>(R.id.message)
-        messageText.text = message
+        messageText.text = message?.uppercase()
+        val header = activity?.findViewById<LinearLayout>(R.id.header)
+        val hamburgerButton = activity?.findViewById<ImageView>(R.id.hamburger_button)
         val closeText = view.findViewById<TextView>(R.id.close)
         closeText.setOnClickListener {
-            finish()
+            val fragment = this
+            activity?.supportFragmentManager?.commit {
+                remove(fragment)
+            }
+            header?.setBackgroundColor(resources.getColor(R.color.teal))
+            hamburgerButton?.setColorFilter(resources.getColor(R.color.white))
         }
         super.onViewCreated(view, savedInstanceState)
     }
